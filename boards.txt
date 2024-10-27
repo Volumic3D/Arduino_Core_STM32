@@ -8796,7 +8796,7 @@ GenH7.name=Generic STM32H7 Series
 
 GenH7.build.core=arduino
 GenH7.build.board=GenH7
-GenH7.build.st_extra_flags=-DCORE_CM7 -D{build.product_line} {build.enable_usb} {build.xSerial}
+GenH7.build.st_extra_flags=-DCORE_CM7 -D{build.product_line} {build.enable_usb} {build.xSerial} {build.bootloader_flags}
 GenH7.build.fpu=-mfpu=fpv4-sp-d16
 GenH7.build.float-abi=-mfloat-abi=hard
 GenH7.build.series=STM32H7xx
@@ -9438,6 +9438,12 @@ GenH7.menu.upload_method.OpenOCDSTLink.upload.tool=openocd_upload
 GenH7.menu.upload_method.OpenOCDDapLink=OpenOCD DapLink (SWD)
 GenH7.menu.upload_method.OpenOCDDapLink.upload.protocol=cmsis-dap
 GenH7.menu.upload_method.OpenOCDDapLink.upload.tool=openocd_upload
+
+GenH7.menu.upload_method.hidMethod=HID Bootloader 2.2
+GenH7.menu.upload_method.hidMethod.upload.protocol=hid22
+GenH7.menu.upload_method.hidMethod.upload.tool=hid_upload
+GenH7.menu.upload_method.hidMethod.build.flash_offset=0x20000
+GenH7.menu.upload_method.hidMethod.build.bootloader_flags=-DBL_HID
 
 ################################################################################
 # Generic L0
